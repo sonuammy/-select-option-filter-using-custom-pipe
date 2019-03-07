@@ -1,0 +1,11 @@
+<div style="width:20%">
+  <select class="form-control" [(ngModel)]="city">
+    <option [ngValue]="undefined" disabled  selected>Select an option...</option>
+    <option *ngFor="let cityOpt of citySelect" >{{cityOpt.cityName}}</option>
+  </select>
+  <div *ngFor="let citylists of citySelect | selectcity: city">
+    <p style="background-color:greenyellow" >{{citylists.cityName}}</p>
+  </div>
+</div>
+
+
